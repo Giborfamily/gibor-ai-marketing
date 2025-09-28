@@ -2,111 +2,377 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GIBOR | Business Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GIBOR Martial Arts | Martial Arts • Strength • Mindset</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Modern martial arts training for kids, teens, and adults in Kew Gardens Hills. Discipline, focus, confidence — with clear progress and a positive culture." />
+  <link rel="canonical" href="https://giborma.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GIBOR Martial Arts | Martial Arts • Strength • Mindset" />
+  <meta property="og:description" content="Join classes that build confidence, discipline, and real self-defense. Book a free trial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://giborma.com/" />
+  <meta property="og:image" content="https://giborma.com/og-cover.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Styles -->
+  <link rel="preload" as="style" href="./shared/styles.css" />
   <link rel="stylesheet" href="./shared/styles.css" />
+
+  <style>
+    /* Page-specific polish */
+    .hero .stats { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+    .stat { background: rgba(0,0,0,.35); border:1px solid var(--border); padding:8px 12px; border-radius:12px; font-size:14px; }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:rgba(255,61,0,.08); font-size:12px; }
+    .program-icon { font-size:22px; opacity:.9; }
+    .price { font-size:28px; font-weight:800; }
+    .price small { font-size:14px; color: var(--muted); font-weight:600; }
+    .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .coach { display:flex; gap:14px; align-items:center; }
+    .coach img { width:64px; height:64px; border-radius:50%; object-fit:cover; border:1px solid var(--border); }
+    .review { font-style: italic; color: var(--muted); }
+    .grid.cols-4 { display:grid; gap:16px; grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1024px){ .grid.cols-4 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px){ .grid.cols-4 { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- Schema.org (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsActivityLocation",
+    "name":"GIBOR Martial Arts",
+    "url":"https://giborma.com/",
+    "telephone":"+1-718-880-2136",
+    "email":"info@giborma.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"72-50 Main St, 2nd Fl",
+      "addressLocality":"Kew Gardens Hills",
+      "addressRegion":"NY",
+      "postalCode":"11367",
+      "addressCountry":"US"
+    },
+    "sameAs":["https://www.instagram.com/gibor.ma"]
+  }
+  </script>
 </head>
 <body>
+<!-- WhatsApp floating button -->
 <div data-whatsapp data-number="17188802136" data-message="Hi! I'm interested in a trial class at GIBOR."></div>
 
-<header class="navbar">
+<header class="navbar" role="banner">
   <div class="container navbar-inner">
-    <div class="logo">
+    <a class="logo" href="#top" aria-label="GIBOR home">
       <span class="logo-badge">G</span>
-      <span>Martial Arts • Strength • Mindset</span>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle navigation" data-target="#nav">☰ Menu</button>
-    <nav id="nav" class="nav-links">
+      <span>GIBOR Martial Arts</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-target="#nav">☰ Menu</button>
+    <nav id="nav" class="nav-links" role="navigation" aria-label="Primary">
+      <a href="#about">Why GIBOR</a>
       <a href="#programs">Programs</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="cta">Trial Class</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#pricing">Membership</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#contact" class="cta">Free Trial</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <div class="card">
-      <span class="kicker">GIBOR Martial Arts</span>
-      <h1>Martial Arts • Strength • Mindset</h1>
-      <p class="lead">A complete training system for kids, teens, and adults.</p>
-      <div class="stack-s">
-        <a href="#contact" class="btn">Book Your Trial</a>
-        <button class="btn outline small" data-action="toggle-theme" type="button">Toggle Theme</button>
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="card">
+        <span class="kicker">Discipline • Focus • Confidence</span>
+        <h1>Martial Arts • Strength • Mindset</h1>
+        <p class="lead">A complete training system for kids, teens, and adults — real self‑defense and lifelong character skills.</p>
+        <div class="stack-s">
+          <div class="inline-cta">
+            <a href="#contact" class="btn">Book Your Free Trial</a>
+            <button class="btn outline small" data-action="toggle-theme" type="button">Toggle Theme</button>
+          </div>
+          <div class="stats">
+            <span class="stat">⭐ 200+ Parent Reviews</span>
+            <span class="stat">🥋 Belts & Stripes System</span>
+            <span class="stat">📍 Kew Gardens Hills</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<main>
-  <section class="section">
+  <!-- WHY GIBOR -->
+  <section id="about" class="section">
     <div class="container grid cols-3">
       <div class="card">
         <h3>Why Parents Choose Us</h3>
         <p class="muted">Structure, positive coaching, clear progress, and a safe community.</p>
+        <div class="stack-s">
+          <span class="pill">Beginner‑Friendly</span>
+          <span class="pill">Bully‑Proof Basics</span>
+          <span class="pill">Small Groups</span>
+        </div>
       </div>
       <div class="card">
         <h3>Skill Progression</h3>
         <p class="muted">Belts, stripes, and milestones keep students engaged and motivated.</p>
+        <ul class="stack-s">
+          <li>Listening under pressure</li>
+          <li>Composure & self‑control</li>
+          <li>Technical foundations</li>
+        </ul>
       </div>
       <div class="card">
         <h3>Flexible Schedules</h3>
-        <p class="muted">Multiple weekly options for every age group.</p>
+        <p class="muted">Multiple weekly options for every age group — pick the time that works.</p>
+        <a href="#schedule" class="btn small outline">See Schedule</a>
       </div>
     </div>
   </section>
 
+  <!-- PROGRAMS -->
   <section id="programs" class="section">
     <div class="container">
       <h2>Programs</h2>
-      <div class="grid cols-3">
-        <div class="card"><strong>Little GIBOR</strong><p class="muted">Ages 3–6</p></div>
-        <div class="card"><strong>Junior GIBOR</strong><p class="muted">Ages 7–12</p></div>
-        <div class="card"><strong>Teens / Adults</strong><p class="muted">Grappling, Kickboxing, Strength</p></div>
+      <div class="grid cols-4">
+        <div class="card">
+          <div class="program-icon">🧒</div>
+          <h3>Little GIBOR (3–6)</h3>
+          <p class="muted">Listening, balance, body control — fun & focused.</p>
+        </div>
+        <div class="card">
+          <div class="program-icon">👦</div>
+          <h3>Junior GIBOR (7–12)</h3>
+          <p class="muted">Confidence, coordination, and bully‑proofing.</p>
+        </div>
+        <div class="card">
+          <div class="program-icon">🧑</div>
+          <h3>Teens</h3>
+          <p class="muted">Kickboxing & grappling foundations + mindset training.</p>
+        </div>
+        <div class="card">
+          <div class="program-icon">💪</div>
+          <h3>Adults</h3>
+          <p class="muted">Strength & self‑defense in a supportive community.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <div class="container grid cols-2">
+  <!-- SCHEDULE -->
+  <section id="schedule" class="section">
+    <div class="container card">
+      <h2>Weekly Schedule</h2>
+      <div class="grid cols-2">
+        <div>
+          <table class="table" aria-label="Youth schedule">
+            <thead><tr><th>Day</th><th>Time</th><th>Group</th></tr></thead>
+            <tbody>
+              <tr><td>Mon & Wed</td><td>4:45 PM</td><td>Grapplers (Ages 5–8)</td></tr>
+              <tr><td>Tue & Thu</td><td>5:30 PM</td><td>Grapplers (Ages 5–8)</td></tr>
+              <tr><td>Sun</td><td>10:30 AM</td><td>Grapplers (Ages 5–8)</td></tr>
+              <tr><td>Mon & Wed</td><td>7:45 PM</td><td>Beginner Kickboxing (Ages 9–13)</td></tr>
+              <tr><td>Tue & Thu</td><td>7:00 PM</td><td>Beginner Kickboxing (Ages 9–13)</td></tr>
+              <tr><td>Sun</td><td>12:45 PM</td><td>Beginner Kickboxing (Ages 9–13)</td></tr>
+              <tr><td>Sun</td><td>1:30 PM</td><td>Junior GIBOR (Ages 10–13)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table class="table" aria-label="Adult schedule">
+            <thead><tr><th>Day</th><th>Time</th><th>Class</th></tr></thead>
+            <tbody>
+              <tr><td>Mon–Thu</td><td>8:30 PM</td><td>Adults Strength & Self‑Defense</td></tr>
+            </tbody>
+          </table>
+          <div class="stack-s" style="margin-top:10px;">
+            <a href="#contact" class="btn">Book a Free Trial</a>
+            <a href="tel:+17188802136" class="btn outline">Call (718) 880‑2136</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / MEMBERSHIP -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2>Membership Options</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Trial Month</h3>
+          <p class="price">$301 <small>8 classes + uniform</small></p>
+          <ul class="stack-s">
+            <li>Perfect starter month</li>
+            <li>Beginner‑friendly</li>
+            <li>Flexible times</li>
+          </ul>
+          <a href="#contact" class="btn">Start Trial</a>
+        </div>
+        <div class="card">
+          <h3>Foundation (6‑mo)</h3>
+          <p class="price">$— <small>2× / 3× per week</small></p>
+          <ul class="stack-s">
+            <li>Structured skill path</li>
+            <li>Progress checks</li>
+            <li>Parent updates</li>
+          </ul>
+          <a href="#contact" class="btn outline">Ask About Rates</a>
+        </div>
+        <div class="card">
+          <h3>Mastery (12‑mo)</h3>
+          <p class="price">$— <small>Best value</small></p>
+          <ul class="stack-s">
+            <li>Commit to growth</li>
+            <li>Priority slots</li>
+            <li>Member perks</li>
+          </ul>
+          <a href="#contact" class="btn outline">Ask About Rates</a>
+        </div>
+      </div>
+      <p class="muted mono" style="margin-top:10px;">*Family discounts & gear bundles available.</p>
+    </div>
+  </section>
+
+  <!-- COACHES -->
+  <section id="coaches" class="section">
+    <div class="container">
+      <h2>Meet Your Coaches</h2>
+      <div class="grid cols-3">
+        <div class="card coach">
+          <img src="./media/coach-michael.jpg" alt="Coach Michael" loading="lazy" />
+          <div>
+            <strong>Sensei Michael</strong>
+            <p class="muted">Founder • Youth development, striking & grappling fundamentals.</p>
+          </div>
+        </div>
+        <div class="card coach">
+          <img src="./media/coach-riva.jpg" alt="Coach Riva" loading="lazy" />
+          <div>
+            <strong>Coach Riva</strong>
+            <p class="muted">Women’s fitness • Functional strength & confidence coaching.</p>
+          </div>
+        </div>
+        <div class="card coach">
+          <img src="./media/coach-team.jpg" alt="Assistant Coaches" loading="lazy" />
+          <div>
+            <strong>Assistant Coaches</strong>
+            <p class="muted">Positive role models focused on safety, technique, and respect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <div class="container grid cols-3">
       <div class="card">
-        <h2>Visit Us</h2>
-        <p class="muted">72-50 Main St, 2nd Fl, Kew Gardens Hills, NY</p>
-        <iframe title="Map" style="width:100%;height:240px;border:0;border-radius:12px"
-          src="https://maps.google.com/maps?q=72-50%20Main%20St%20NY&z=15&output=embed"></iframe>
+        <strong>Parent Review</strong>
+        <p class="review">“We started a month ago and couldn’t be happier. Focus and confidence went up, and he loves coming.”</p>
+        <span class="pill">⭐️⭐️⭐️⭐️⭐️</span>
       </div>
       <div class="card">
-        <h2>Contact</h2>
-        <form class="stack-s" id="contact-form">
-          <label for="email">Email</label>
-          <input id="email" class="input" type="email" placeholder="you@example.com" required/>
-          <label for="msg">Message</label>
-          <textarea id="msg" rows="4" placeholder="How can we help?"></textarea>
-          <button class="btn" type="submit">Send</button>
+        <strong>Real Progress</strong>
+        <p class="muted">Belts, stripes, and clear milestones keep kids motivated and accountable.</p>
+      </div>
+      <div class="card">
+        <strong>Safe & Structured</strong>
+        <p class="muted">Professional coaching, safety gear, and a positive culture of respect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + CONTACT -->
+  <section class="section" id="contact">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2>FAQ</h2>
+        <details>
+          <summary><strong>Is it safe?</strong></summary>
+          <p class="muted">Yes — structured drills, progressive skills, and safety gear.</p>
+        </details>
+        <details>
+          <summary><strong>Is my child too hyper?</strong></summary>
+          <p class="muted">High energy is a gift. We channel it into focus and discipline.</p>
+        </details>
+        <details>
+          <summary><strong>What should we bring?</strong></summary>
+          <p class="muted">Water and comfortable clothes for the trial. Uniform after sign‑up.</p>
+        </details>
+      </div>
+
+      <div class="card">
+        <h2>Book a Free Trial</h2>
+        <form class="stack-s" id="trial-form">
+          <div class="form-row">
+            <div>
+              <label for="pname">Parent Name</label>
+              <input id="pname" class="input" placeholder="Full name" required autocomplete="name" />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" class="input" placeholder="(718) 000‑0000" required inputmode="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <label for="group">Age Group</label>
+          <select id="group" class="input">
+            <option>3–6</option><option>7–12</option><option>10–13</option><option>Adults</option>
+          </select>
+          <button class="btn" type="submit">Reserve Spot</button>
+          <p id="trial-note" class="muted" style="display:none;">Thanks! We’ll text you shortly.</p>
         </form>
         <script>
-          document.getElementById('contact-form').addEventListener('submit', e => {
-            e.preventDefault(); toast('Message sent. We usually reply within a few hours.'); e.target.reset();
+          document.getElementById('trial-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const f=e.currentTarget;
+            if(!f.checkValidity()){ f.reportValidity(); return; }
+            toast('Reserved! We’ll confirm by text.'); 
+            document.getElementById('trial-note').style.display='block';
+            f.reset();
           });
         </script>
       </div>
     </div>
   </section>
+
+  <!-- MAP -->
+  <section class="section">
+    <div class="container card">
+      <h2>Visit Us</h2>
+      <p class="muted">72-50 Main St, 2nd Fl, Kew Gardens Hills, NY</p>
+      <iframe
+        title="Map to GIBOR Martial Arts"
+        loading="lazy"
+        style="width:100%;height:260px;border:0;border-radius:12px"
+        src="https://maps.google.com/maps?q=72-50%20Main%20St%20NY&z=15&output=embed">
+      </iframe>
+      <div class="stack-s" style="margin-top:10px;">
+        <a href="tel:+17188802136" class="btn outline">Call (718) 880‑2136</a>
+        <a href="mailto:info@giborma.com" class="btn outline">Email info@giborma.com</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="grid cols-2">
-      <div>
-        <strong>GIBOR Martial Arts</strong><br/>
-        72-50 Main St, 2nd Fl, Kew Gardens Hills, NY 11367<br/>
-        <a href="tel:+17188802136">718-880-2136</a> • <a href="mailto:info@giborma.com">info@giborma.com</a>
-      </div>
-      <div class="center">© 2025 GIBOR. All rights reserved.</div>
+<footer class="footer" role="contentinfo">
+  <div class="container grid cols-2">
+    <div>
+      <strong>GIBOR Martial Arts</strong><br/>
+      72-50 Main St, 2nd Fl, Kew Gardens Hills, NY 11367<br/>
+      <a href="tel:+17188802136">718‑880‑2136</a> • <a href="mailto:info@giborma.com">info@giborma.com</a>
     </div>
+    <div class="center">© <span id="year"></span> GIBOR • Martial Arts • Strength • Mindset</div>
   </div>
 </footer>
 
 <script src="./shared/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
