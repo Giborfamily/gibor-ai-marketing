@@ -2,107 +2,323 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GIBOR | Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GIBOR Martial Arts | Unlock Your Child’s Potential</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Confidence, discipline, and real self-defense for kids, teens, and adults in Kew Gardens Hills. Book a free trial at GIBOR Martial Arts." />
+  <link rel="canonical" href="https://giborma.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GIBOR Martial Arts | Unlock Your Child’s Potential" />
+  <meta property="og:description" content="Join classes that build confidence, discipline, and real self-defense. Book a free trial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://giborma.com/" />
+  <meta property="og:image" content="https://giborma.com/og-cover.jpg" />
+
+  <!-- Favicons (replace with your files if available) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Fonts (preconnect for speed) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="./shared/styles.css" />
   <link rel="stylesheet" href="./shared/styles.css" />
+
+  <style>
+    /* Page-specific polish (kept tiny) */
+    .hero-wrap { position: relative; }
+    .hero-media {
+      position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: 24px;
+      border: 1px solid var(--border);
+    }
+    .hero-media video, .hero-media img {
+      width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) contrast(1.05);
+    }
+    .hero-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
+      position: absolute; inset: 0; border-radius: 24px;
+    }
+    .trustbar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .trustbar .pill { border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:12px; background:rgba(255,61,0,.08); }
+    .feature-list { display:grid; gap:10px; }
+    .feature-list li { list-style: none; padding-left: 24px; position: relative; }
+    .feature-list li::before { content: "✓"; position:absolute; left:0; top:0; color: var(--brand-2); }
+    .badge-soft { display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:#0f1320; font-size:12px; }
+    .inline-cta { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .program-card h3 { margin:0 0 6px; }
+    .review { font-style: italic; color: var(--muted); }
+    .faq details { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--card); }
+    .faq details + details { margin-top: 10px; }
+    .grid.cols-4 { display:grid; gap: 16px; grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1024px) { .grid.cols-4 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .grid.cols-4 { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsActivityLocation",
+    "name":"GIBOR Martial Arts",
+    "image":"https://giborma.com/og-cover.jpg",
+    "url":"https://giborma.com/",
+    "telephone":"+1-718-880-2136",
+    "email":"info@giborma.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"72-50 Main St, 2nd Fl",
+      "addressLocality":"Kew Gardens Hills",
+      "addressRegion":"NY",
+      "postalCode":"11367",
+      "addressCountry":"US"
+    },
+    "geo": { "@type":"GeoCoordinates", "latitude":40.728, "longitude":-73.821 },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"16:30","closes":"21:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"10:00","closes":"14:30"}
+    ],
+    "sameAs":["https://www.instagram.com/gibor.ma"]
+  }
+  </script>
 </head>
 <body>
-<div data-whatsapp data-number="17188802136" data-message="Hi! I'm interested in a trial class at GIBOR."></div>
+<!-- WhatsApp floating button (handled by shared/script.js) -->
+<div data-whatsapp data-number="17188802136" data-message="Hi! I'd like to book a free trial at GIBOR."></div>
 
-<header class="navbar">
+<header class="navbar" role="banner">
   <div class="container navbar-inner">
-    <div class="logo">
+    <a class="logo" href="#top" aria-label="GIBOR home">
       <span class="logo-badge">G</span>
-      <span>Unlock Your Potential</span>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle navigation" data-target="#nav">☰ Menu</button>
-    <nav id="nav" class="nav-links">
+      <span>GIBOR Martial Arts</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-target="#nav">☰ Menu</button>
+    <nav id="nav" class="nav-links" role="navigation" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#programs">Programs</a>
-      <a href="#contact" class="cta">Trial Class</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contact" class="cta">Free Trial</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <div class="card">
-      <span class="kicker">GIBOR Martial Arts</span>
-      <h1>Unlock Your Potential</h1>
-      <p class="lead">Join classes that build confidence, discipline, and real self‑defense.</p>
-      <div class="stack-s">
-        <a href="#contact" class="btn">Book Your Trial</a>
-        <button class="btn outline small" data-action="toggle-theme" type="button">Toggle Theme</button>
+<main id="top">
+  <!-- HERO -->
+  <section class="section">
+    <div class="container hero-wrap">
+      <div class="hero-media" aria-hidden="true">
+        <!-- Replace with your short 12–18s MP4; poster for instant paint -->
+        <video autoplay loop muted playsinline poster="./media/hero-poster.jpg">
+          <source src="./media/hero-reel.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="card" style="padding:28px; border-radius:24px;">
+        <span class="kicker">Discipline • Focus • Confidence</span>
+        <h1 style="margin-top:6px;">Unlock Your Child’s Potential</h1>
+        <p class="lead">Fun, structured classes for kids, teens, and adults in Kew Gardens Hills — building real self‑defense and strong character.</p>
+        <div class="inline-cta">
+          <a href="#contact" class="btn" aria-label="Book a free trial">Book Free Trial</a>
+          <button class="btn outline small" data-action="toggle-theme" type="button">Toggle Theme</button>
+          <span class="badge-soft" aria-label="Parent reviews">⭐ 200+ Parent Reviews</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<main>
+  <!-- WHY GIBOR -->
   <section id="about" class="section">
     <div class="container grid cols-2">
       <div class="card">
-        <h2>About GIBOR</h2>
-        <p class="muted">We help kids and adults develop life skills through structured martial arts and functional strength training.</p>
-        <ul class="stack-s">
-          <li>✅ Focus & discipline</li>
-          <li>✅ Bully‑proof confidence</li>
-          <li>✅ Functional strength</li>
+        <h2>Why Families Choose GIBOR</h2>
+        <p class="muted">We combine modern martial arts with youth development so students grow on and off the mat.</p>
+        <ul class="feature-list">
+          <li>Progress you can see: belts, stripes, milestones</li>
+          <li>Confidence through composure, not bravado</li>
+          <li>Safety-first, positive coaching culture</li>
+          <li>Focus, discipline, and grit for school & life</li>
         </ul>
+        <div class="trustbar" style="margin-top:10px;">
+          <span class="pill">Bully‑Proof Basics</span>
+          <span class="pill">Beginner‑Friendly</span>
+          <span class="pill">Small Groups</span>
+          <span class="pill">Parent‑Approved</span>
+        </div>
       </div>
+
       <div class="card" id="contact">
         <h3>Try a Free Class</h3>
-        <form class="stack-s" id="trial-form">
+        <form id="trial-form" class="stack-s" autocomplete="on" novalidate>
           <div class="form-row">
             <div>
-              <label for="name">Name</label>
-              <input id="name" class="input" placeholder="Full name" required/>
+              <label for="name">Parent Name</label>
+              <input id="name" name="name" class="input" placeholder="Full name" required autocomplete="name" />
             </div>
             <div>
               <label for="phone">Phone</label>
-              <input id="phone" class="input" placeholder="(718) 000‑0000" required/>
+              <input id="phone" name="tel" class="input" placeholder="(718) 000‑0000" required inputmode="tel" autocomplete="tel" />
             </div>
           </div>
           <label for="program">Program</label>
-          <select id="program">
+          <select id="program" name="program" class="input" aria-label="Select program">
             <option>Little GIBOR (3–6)</option>
             <option>Junior GIBOR (7–12)</option>
             <option>Teens Kickboxing</option>
             <option>Adults Strength & Self‑Defense</option>
           </select>
           <button class="btn" type="submit">Reserve Spot</button>
+          <p id="trial-note" class="muted" role="status" aria-live="polite" style="display:none;">Thanks! We will text you shortly.</p>
         </form>
         <script>
           document.getElementById('trial-form').addEventListener('submit', e => {
-            e.preventDefault(); toast('Thanks! We will text you shortly.'); e.target.reset();
+            e.preventDefault();
+            const form = e.currentTarget;
+            if (!form.checkValidity()) { form.reportValidity(); return; }
+            toast('Thanks! We will text you shortly.');
+            document.getElementById('trial-note').style.display = 'block';
+            form.reset();
           });
         </script>
       </div>
     </div>
   </section>
 
+  <!-- PROGRAMS -->
   <section id="programs" class="section">
+    <div class="container">
+      <h2>Programs</h2>
+      <div class="grid cols-4">
+        <div class="card program-card">
+          <h3>Little GIBOR</h3>
+          <p class="muted">Ages 3–6 • Listening, balance, and body control</p>
+        </div>
+        <div class="card program-card">
+          <h3>Junior GIBOR</h3>
+          <p class="muted">Ages 7–12 • Confidence, coordination, bully‑proofing</p>
+        </div>
+        <div class="card program-card">
+          <h3>Teens</h3>
+          <p class="muted">Grappling & Kickboxing fundamentals + mindset</p>
+        </div>
+        <div class="card program-card">
+          <h3>Adults</h3>
+          <p class="muted">Strength & self‑defense in a supportive community</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE PREVIEW -->
+  <section id="schedule" class="section">
+    <div class="container card">
+      <h2>Quick Schedule</h2>
+      <p class="muted" style="margin-top:-6px;">Pick a time that works — or message us and we’ll help.</p>
+      <div class="grid cols-2" style="margin-top:10px;">
+        <div>
+          <table class="table" aria-label="Youth schedule">
+            <thead><tr><th>Day</th><th>Time</th><th>Group</th></tr></thead>
+            <tbody>
+              <tr><td>Mon & Wed</td><td>4:45 PM</td><td>Grapplers (Ages 5–8)</td></tr>
+              <tr><td>Tue & Thu</td><td>5:30 PM</td><td>Grapplers (Ages 5–8)</td></tr>
+              <tr><td>Sun</td><td>10:30 AM</td><td>Grapplers (Ages 5–8)</td></tr>
+              <tr><td>Mon & Wed</td><td>7:45 PM</td><td>Beginner Kickboxing (Ages 9–13)</td></tr>
+              <tr><td>Tue & Thu</td><td>7:00 PM</td><td>Beginner Kickboxing (Ages 9–13)</td></tr>
+              <tr><td>Sun</td><td>12:45 PM</td><td>Beginner Kickboxing (Ages 9–13)</td></tr>
+              <tr><td>Sun</td><td>1:30 PM</td><td>Junior GIBOR (Ages 10–13)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table class="table" aria-label="Adult schedule">
+            <thead><tr><th>Day</th><th>Time</th><th>Class</th></tr></thead>
+            <tbody>
+              <tr><td>Mon–Thu</td><td>8:30 PM</td><td>Adults Strength & Self‑Defense</td></tr>
+            </tbody>
+          </table>
+          <div class="inline-cta" style="margin-top:10px;">
+            <a href="#contact" class="btn">Book Free Trial</a>
+            <a href="tel:+17188802136" class="btn outline">Call (718) 880‑2136</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="section">
     <div class="container grid cols-3">
-      <div class="card"><h3>Little GIBOR</h3><p class="muted">Focus, listening, and balance for ages 3–6.</p></div>
-      <div class="card"><h3>Junior GIBOR</h3><p class="muted">Confidence, coordination, and character for ages 7–12.</p></div>
-      <div class="card"><h3>Adults</h3><p class="muted">Kickboxing, grappling fundamentals, and strength.</p></div>
+      <div class="card">
+        <strong>Parent Review</strong>
+        <p class="review">“After one month at GIBOR, our son’s focus and confidence skyrocketed. He looks forward to every class.”</p>
+        <span class="badge-soft">⭐️⭐️⭐️⭐️⭐️</span>
+      </div>
+      <div class="card">
+        <strong>Real Progress</strong>
+        <p class="muted">Belts, stripes, and clear milestones keep kids motivated and accountable.</p>
+      </div>
+      <div class="card">
+        <strong>Safe & Structured</strong>
+        <p class="muted">Professional coaching, safety gear, and a positive culture of respect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container grid cols-2 faq">
+      <div class="card">
+        <h2>FAQ</h2>
+        <details>
+          <summary><strong>Is it safe?</strong></summary>
+          <p class="muted">Yes. We prioritize safety with structured drills and progressive skills.</p>
+        </details>
+        <details>
+          <summary><strong>Is my child too hyper?</strong></summary>
+          <p class="muted">High energy is a gift. We channel it into focus, discipline, and confidence.</p>
+        </details>
+        <details>
+          <summary><strong>What should we bring?</strong></summary>
+          <p class="muted">Water and comfortable clothes for the trial. Uniform after sign‑up.</p>
+        </details>
+      </div>
+
+      <!-- MAP / CONTACT ALT -->
+      <div class="card">
+        <h2>Visit Us</h2>
+        <p class="muted">72-50 Main St, 2nd Fl, Kew Gardens Hills, NY</p>
+        <iframe
+          title="Map to GIBOR Martial Arts"
+          loading="lazy"
+          style="width:100%;height:260px;border:0;border-radius:12px"
+          src="https://maps.google.com/maps?q=72-50%20Main%20St%20NY&z=15&output=embed">
+        </iframe>
+        <p class="muted" style="margin-top:10px;">
+          Prefer texting? Tap the WhatsApp button or call us at
+          <a href="tel:+17188802136">718‑880‑2136</a>.
+        </p>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="grid cols-2">
-      <div>
-        <strong>GIBOR Martial Arts</strong><br/>
-        72-50 Main St, 2nd Fl, Kew Gardens Hills, NY 11367<br/>
-        <a href="tel:+17188802136">718-880-2136</a> • <a href="mailto:info@giborma.com">info@giborma.com</a>
-      </div>
-      <div class="center">© 2025 GIBOR. All rights reserved.</div>
+<footer class="footer" role="contentinfo">
+  <div class="container grid cols-2">
+    <div>
+      <strong>GIBOR Martial Arts</strong><br />
+      72-50 Main St, 2nd Fl, Kew Gardens Hills, NY 11367<br />
+      <a href="tel:+17188802136">718‑880‑2136</a> • <a href="mailto:info@giborma.com">info@giborma.com</a>
+    </div>
+    <div class="center">
+      © <span id="year"></span> GIBOR • Martial Arts • Strength • Mindset
     </div>
   </div>
 </footer>
 
 <script src="./shared/script.js"></script>
+<script>
+  // lazy year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
