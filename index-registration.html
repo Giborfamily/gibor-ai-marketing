@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GIBOR | Program Registration</title>
+  <link rel="stylesheet" href="./shared/styles.css" />
+</head>
+<body>
+<div data-whatsapp data-number="17188802136" data-message="Hi! I'm interested in a trial class at GIBOR."></div>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <div class="logo">
+      <span class="logo-badge">G</span>
+      <span>Kickboxing Trial Month</span>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" data-target="#nav">☰ Menu</button>
+    <nav id="nav" class="nav-links">
+      <a href="#register" class="cta">Register</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="card">
+      <span class="kicker">GIBOR Martial Arts</span>
+      <h1>Kickboxing Trial Month</h1>
+      <p class="lead">8 classes • includes uniform • $301</p>
+      <div class="stack-s">
+        <a href="#register" class="btn">Register Now</a>
+        <button class="btn outline small" data-action="toggle-theme" type="button">Toggle Theme</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2>Limited Spots</h2>
+        <p class="muted">Secure your place. Registration closes in:</p>
+        <div id="countdown" class="badge brand" style="font-size:20px; padding:10px 14px;"></div>
+        <ul class="stack-s" style="margin-top:12px;">
+          <li>✅ Beginner-friendly, great coaches</li>
+          <li>✅ Build confidence & discipline</li>
+          <li>✅ Real self-defense foundations</li>
+        </ul>
+      </div>
+      <div id="register" class="card">
+        <h2>Register Now</h2>
+        <form class="stack-s" id="reg-form">
+          <div class="form-row">
+            <div>
+              <label for="child">Student Name</label>
+              <input id="child" class="input" required/>
+            </div>
+            <div>
+              <label for="age">Age</label>
+              <input id="age" class="input" type="number" min="3" max="80" required/>
+            </div>
+          </div>
+          <label for="slot">Preferred Time</label>
+          <select id="slot">
+            <option>Mon & Wed 4:45 PM (Ages 5–8)</option>
+            <option>Tue & Thu 5:30 PM (Ages 5–8)</option>
+            <option>Sun 10:30 AM (Ages 5–8)</option>
+            <option>Mon & Wed 7:45 PM (Ages 9–13)</option>
+            <option>Tue & Thu 7:00 PM (Ages 9–13)</option>
+            <option>Sun 12:45 PM (Ages 9–13)</option>
+          </select>
+          <!-- Replace with your real checkout link -->
+          <a class="btn" href="https://buy.stripe.com/test_12345" target="_blank" rel="noopener">Pay & Reserve</a>
+        </form>
+        <p class="muted">Need help? Text <a href="tel:+17188802136">718‑880‑2136</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid cols-2">
+      <div>
+        <strong>GIBOR Martial Arts</strong><br/>
+        72-50 Main St, 2nd Fl, Kew Gardens Hills, NY 11367<br/>
+        <a href="tel:+17188802136">718-880-2136</a> • <a href="mailto:info@giborma.com">info@giborma.com</a>
+      </div>
+      <div class="center">© 2025 GIBOR. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="./shared/script.js"></script>
+<script>
+  // Set a deadline ~10 days from now. Change to a fixed date if you prefer.
+  const inTenDays = new Date(Date.now() + 10*24*60*60*1000).toISOString();
+  initCountdown(document.getElementById('countdown'), inTenDays);
+</script>
+</body>
+</html>
