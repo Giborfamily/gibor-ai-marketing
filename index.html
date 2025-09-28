@@ -1,134 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>GIBOR AI Marketing Prompter</title>
-  <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-  <div class="wrap">
-    <header class="header">
-      <div class="brand">
-        <div class="logo">G</div>
-        <div>
-          <div class="sub">GIBOR AI</div>
-          <div class="h1">Marketing Prompter</div>
-        </div>
-      </div>
-      <nav class="tabs">
-        <button class="tab active" data-tab="today">Today</button>
-        <button class="tab" data-tab="library">Library</button>
-        <button class="tab" data-tab="settings">Settings</button>
-      </nav>
-    </header>
+<select id="category" class="select">
+  <option value="parents">Parents</option>
+  <option value="teens">Teens</option>
+  <option value="adults">Adults</option>
+  <option value="gear">Gear</option>
+  <option value="character">Character</option>
+  <option value="trial">Trial Offer</option>
+  <option value="holiday">Holiday</option>
+  <option value="motivation">Motivation Monday</option>
+  <option value="testimonial">Testimonial Spotlight</option>
+  <option value="bts">Behind the Scenes</option>
+  <option value="parenttips">Parent Tips</option>
+  <option value="lifelessons">Life Lessons</option>
+  <option value="shoutout">Team Shoutout</option>
+  <option value="geardrop">Gear Drop</option>
+  <option value="events">Event Alert</option>
+  <option value="flashback">Flashback</option>
+  <option value="quotes">Gibor Quotes</option>
+</select>
 
-    <main id="view-today" class="grid">
-      <div class="card">
-        <div class="row" style="justify-content:space-between">
-          <div>
-            <div class="sub">Today’s Prompt</div>
-            <div id="dateBadge" class="badge"></div>
-          </div>
-          <div class="row">
-            <select id="category" class="select">
-              <option value="parents">Parents</option>
-              <option value="teens">Teens</option>
-              <option value="adults">Adults</option>
-              <option value="gear">Gear</option>
-              <option value="character">Character</option>
-              <option value="trial">Trial Offer</option>
-              <option value="holiday">Holiday</option>
-            </select>
-            <select id="tone" class="select">
-              <option value="bold">Bold</option>
-              <option value="warm">Warm</option>
-              <option value="coach">Coach</option>
-            </select>
-            <button id="gen" class="btn">Generate</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="cols">
-        <div class="card output">
-          <div class="label">Hook</div>
-          <textarea id="hook" class="textarea" readonly></textarea>
-          <div class="copyrow">
-            <button class="copy" data-src="hook">Copy Hook</button>
-          </div>
-          <hr/>
-          <div class="label">Instagram Caption</div>
-          <textarea id="ig" class="textarea" readonly></textarea>
-          <div class="copyrow">
-            <button class="copy" data-src="ig">Copy Instagram</button>
-          </div>
-          <hr/>
-          <div class="label">WhatsApp Message</div>
-          <textarea id="wa" class="textarea" readonly></textarea>
-          <div class="copyrow">
-            <button class="copy" data-src="wa">Copy WhatsApp</button>
-          </div>
-        </div>
-
-        <div class="card output">
-          <div class="label">Email Subject</div>
-          <input id="subject" class="input" readonly/>
-          <div class="copyrow">
-            <button class="copy" data-src="subject">Copy Subject</button>
-          </div>
-          <hr/>
-          <div class="label">Quote / Slogan</div>
-          <input id="quote" class="input" readonly/>
-          <div class="copyrow">
-            <button class="copy" data-src="quote">Copy Quote</button>
-          </div>
-          <hr/>
-          <div class="label">Image Prompt (for designer or AI)</div>
-          <textarea id="image" class="textarea" readonly></textarea>
-          <div class="copyrow">
-            <button class="copy" data-src="image">Copy Image Prompt</button>
-          </div>
-          <div class="small">Tip: paste into your image tool, or hand to a designer.</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="row">
-          <button id="save" class="btn">Save to Library</button>
-          <button id="reshuffle" class="btn ghost">Reshuffle Variations</button>
-        </div>
-        <div class="small">Prompts are stored on this device (localStorage). No account needed.</div>
-      </div>
-    </main>
-
-    <section id="view-library" class="grid" style="display:none">
-      <div class="card">
-        <div class="sub">Saved Prompts</div>
-        <div id="list" class="grid"></div>
-      </div>
-    </section>
-
-    <section id="view-settings" class="grid" style="display:none">
-      <div class="card">
-        <div class="sub">Brand Settings</div>
-        <div class="kv" style="margin-top:8px">
-          <div class="k">Brand</div><input id="brand" class="input" value="Gibor Martial Arts"/>
-          <div class="k">Location</div><input id="location" class="input" value="Flatbush, Brooklyn"/>
-          <div class="k">Email</div><input id="email" class="input" value="info@begibor.com"/>
-          <div class="k">Phone</div><input id="phone" class="input" value="(718) 555‑0123"/>
-          <div class="k">Offer</div><input id="offer" class="input" value="Free Trial Class + $25 Uniform Credit"/>
-          <div class="k">Hashtags</div><input id="hash" class="input" value="#BeTheGibor #TrainWithDiscipline #BrooklynKids"/>
-        </div>
-        <div class="row" style="margin-top:10px">
-          <button id="saveBrand" class="btn">Save Brand</button>
-          <button id="resetAll" class="btn ghost">Reset App</button>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">© <span id="year"></span> Gibor AI Marketing Prompter</footer>
-  </div>
-  <script src="app.js"></script>
-</body>
-</html>
